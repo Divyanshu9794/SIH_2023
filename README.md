@@ -15,3 +15,6 @@ after moving to that directory then In terminal write
 --> after successful installation write in terminal 
 
 node mongo1.js
+
+
+then  open Browser and write localhost:2204
