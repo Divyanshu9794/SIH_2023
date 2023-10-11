@@ -1,13 +1,25 @@
 const express = require('express')
 var bodyParser = require("body-parser");
-const { MongoClient } = require('mongodb');
-const url = 'mongodb://localhost:27017';
-const client = new MongoClient(url);
-const db_name = 'Olympic';
+// const { MongoClient } = require('mongodb');
+// const url = 'mongodb://localhost:27017';
+// const client = new MongoClient(url);
+const db_name = 'Bus-yatri';
 const app = express()
 const port = 2204
 const nodemailer = require('nodemailer');
 const alert = require('alert');
+const { MongoClient, ServerApiVersion } = require('mongodb');
+const uri = "mongodb+srv://sdivyanshu:divyanshu352@cluster0.cp0uk3u.mongodb.net/?retryWrites=true&w=majority";
+
+// Create a MongoClient with a MongoClientOptions object to set the Stable API version
+const client = new MongoClient(uri, {
+  serverApi: {
+    version: ServerApiVersion.v1,
+    strict: true,
+    deprecationErrors: true,
+  }
+});
+
 
 
 app.use(express.static("Asset"));
@@ -23,10 +35,6 @@ app.get('/signup.html', (req, res) => {
 })
 
 
-
-
-
-
 app.use(bodyParser.urlencoded({
     extended: true
 }));
@@ -34,9 +42,13 @@ const db = client.db(db_name)
 app.post('/signup.html', function (req, res) {
    
     const email = req.body.email
+    const phone = req.body.phone
+    // const city = req.body.subject.option
     
-    const name = req.body.name
+    const fname = req.body.first_name
+    const lname = req.body.last_name
     const pass = req.body.password
+    const eid = req.body.EmployeeID
     const confrm_pass = req.body.confrm_passwd
     const transporter = nodemailer.createTransport({
         service: 'gmail',
@@ -49,8 +61,8 @@ app.post('/signup.html', function (req, res) {
     var mailoptions = {
         from: 'sdivyanshu5561@gmail.com',
         to: req.body.email,
-        subject: 'Welcome to Geeks olympics ' ,
-        html: "Welcome to geeks Olympics"
+        subject: 'Welcome to BusYatri ' ,
+        html: "Welcome to BusYatri Admin Dashboard Panel.."
 
 
     };
@@ -71,10 +83,16 @@ app.post('/signup.html', function (req, res) {
 
     var data = {
         
-        "name":name,
-        "email": email,
-        "password": pass,
-        "confrm_passwd": confrm_pass
+        "Name":fname + lname,
+        "Employee ID":eid,
+
+
+        "Email": email,
+        "Phone Number": phone,
+        "Password": pass,
+        "Confirm Password": confrm_pass,
+        // "City": city
+        
     }
     db.collection('Signup').insertOne(data, function (err, collection) {
         if (err) console.log(err)
