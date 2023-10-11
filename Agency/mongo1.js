@@ -34,7 +34,7 @@ app.get('/signup.html', (req, res) => {
 
 })
 app.get('/login.html', (req, res) => {
-    res.sendFile(__dirname + '/signup.html')
+    res.sendFile(__dirname + '/login.html')
 
 })
 
@@ -167,12 +167,12 @@ app.post('/payment.html', (req, res) => {
 app.post('/login.html',async(req,res)=>{
 
     try{
-        const login_user=req.body.email
+        const login_user=req.body.EmployeeID
         const password=req.body.password
-        const useremail=await db.collection('Signup').findOne({email:login_user});
+        const empid=await db.collection('Signup').findOne({Employee_ID:login_user});
         // res.send(useremail);
         // console.log(useremail);
-        if(useremail.password==password){
+        if(empid.password==password){
             console.log("Login Successfully");
         
  
