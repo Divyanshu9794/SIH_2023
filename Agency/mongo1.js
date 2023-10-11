@@ -33,6 +33,10 @@ app.get('/signup.html', (req, res) => {
     res.sendFile(__dirname + '/signup.html')
 
 })
+app.get('/login.html', (req, res) => {
+    res.sendFile(__dirname + '/signup.html')
+
+})
 
 
 app.use(bodyParser.urlencoded({
