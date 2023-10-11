@@ -84,7 +84,7 @@ app.post('/signup.html', function (req, res) {
     var data = {
         
         "Name":fname + lname,
-        "Employee ID":eid,
+        "Employee_ID":eid,
 
 
         "Email": email,
@@ -96,7 +96,21 @@ app.post('/signup.html', function (req, res) {
     }
     db.collection('Signup').insertOne(data, function (err, collection) {
         if (err) console.log(err)
-        else console.log("Record inserted")
+        const empid=req.body.EmployeeID
+        const userid= db.collection('Signup').findOne({eid:empid});
+        if(userid==empid){
+            console.log("User Already Exist");
+        
+ 
+            alert('User Already Exists!!')
+            res.redirect("/");
+            
+        }
+        else{
+            console.log("USer Logged IN")
+            alert('Welcome')
+        }
+       
     })
 
 })
