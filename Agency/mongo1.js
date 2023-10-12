@@ -37,6 +37,18 @@ app.get('/login.html', (req, res) => {
     res.sendFile(__dirname + '/login.html')
 
 })
+app.get('/map.html', (req, res) => {
+    res.sendFile(__dirname + '/map.html')
+
+})
+app.get('/pass.html', (req, res) => {
+    res.sendFile(__dirname + '/pass.html')
+
+})
+app.get('/ticket.html', (req, res) => {
+    res.sendFile(__dirname + '/ticket.html')
+
+})
 
 
 app.use(bodyParser.urlencoded({
