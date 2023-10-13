@@ -1,24 +1,24 @@
 const express = require('express')
 var bodyParser = require("body-parser");
-// const { MongoClient } = require('mongodb');
-// const url = 'mongodb://localhost:27017';
-// const client = new MongoClient(url);
-const db_name = 'Bus-yatri';
+const { MongoClient } = require('mongodb');
+const url = 'mongodb://localhost:27017';
+const client = new MongoClient(url);
+const db_name = 'BusYatri';
 const app = express()
 const port = 2204
 const nodemailer = require('nodemailer');
 const alert = require('alert');
-const { MongoClient, ServerApiVersion } = require('mongodb');
-const uri = "mongodb+srv://sdivyanshu:divyanshu352@cluster0.cp0uk3u.mongodb.net/?retryWrites=true&w=majority";
+// const { MongoClient, ServerApiVersion } = require('mongodb');
+// const uri = "mongodb+srv://sdivyanshu:divyanshu352@cluster0.cp0uk3u.mongodb.net/?retryWrites=true&w=majority";
 
 // Create a MongoClient with a MongoClientOptions object to set the Stable API version
-const client = new MongoClient(uri, {
-  serverApi: {
-    version: ServerApiVersion.v1,
-    strict: true,
-    deprecationErrors: true,
-  }
-});
+// const client = new MongoClient(uri, {
+//   serverApi: {
+//     version: ServerApiVersion.v1,
+//     strict: true,
+//     deprecationErrors: true,
+//   }
+// });
 
 
 
@@ -47,6 +47,10 @@ app.get('/pass.html', (req, res) => {
 })
 app.get('/ticket.html', (req, res) => {
     res.sendFile(__dirname + '/ticket.html')
+
+})
+app.get('/bus_running.html', (req, res) => {
+    res.sendFile(__dirname + '/bus_running.html')
 
 })
 
@@ -176,7 +180,7 @@ app.post('/payment.html', (req, res) => {
   });
 
 
-app.post('/login.html',async(req,res)=>{
+app.post('/',async(req,res)=>{
 
     try{
         const login_user=req.body.EmployeeID
@@ -189,7 +193,7 @@ app.post('/login.html',async(req,res)=>{
         
  
             alert('Logged In Successfully')
-            res.redirect("/");
+            res.redirect("/index.html");
             
         }
         else{
