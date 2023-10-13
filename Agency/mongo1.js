@@ -26,15 +26,15 @@ app.use(express.static("Asset"));
 
 //static path:the entire public directory is made static
 app.get('/', (req, res) => {
-    res.sendFile(__dirname + '/index.html')
+    res.sendFile(__dirname + '/login.html')
 
 })
 app.get('/signup.html', (req, res) => {
     res.sendFile(__dirname + '/signup.html')
 
 })
-app.get('/login.html', (req, res) => {
-    res.sendFile(__dirname + '/login.html')
+app.get('/index.html', (req, res) => {
+    res.sendFile(__dirname + '/index.html')
 
 })
 app.get('/map.html', (req, res) => {
