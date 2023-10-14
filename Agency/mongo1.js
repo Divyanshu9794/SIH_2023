@@ -1,5 +1,7 @@
 const express = require('express')
 var bodyParser = require("body-parser");
+const mongoose = require('mongoose');
+
 const { MongoClient } = require('mongodb');
 const url = 'mongodb://localhost:27017';
 const client = new MongoClient(url);
@@ -211,6 +213,31 @@ app.post('/',async(req,res)=>{
     }
 })
 
+
+const mongoURI = 'mongodb://localhost/BusYatri';
+
+const Schema = mongoose.Schema;
+const revenueSchema = new Schema({
+  Date_time: String,
+  Source: String,
+  Destination: String,
+  Cost: Number
+});
+const RevenueModel = mongoose.model('Revenue', revenueSchema, 'Revenue');
+
+app.set('view engine', 'ejs');
+
+mongoose.connect(mongoURI, { useNewUrlParser: true, useUnifiedTopology: true });
+
+app.get('/ticket.html', (req, res) => {
+  RevenueModel.find({}, (err, data) => {
+    if (err) {
+      console.error('Error retrieving data: ' + err);
+      return res.status(500).send('Error retrieving data.');
+    }
+    res.render('ticket', { data: data });
+  });
+});
 
 
 
