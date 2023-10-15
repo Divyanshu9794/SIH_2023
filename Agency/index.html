@@ -3,13 +3,108 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>BUS YATRI</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/index.css">
+    <style>
+      #map {
+        height: 450px;
+        width: 100%;
+      }
+    </style>
 </head>
 <body>
+  <nav class="navbar">
 
-      
-      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <img src="/images/logo.jpg" class="logo"></img>
+    <ul class="nav-links">
+    
+    <li class="active  "><a href="/index.html">Home</a></li>
+    
+    <li><a href="/route.html">Routes</a></li>
+    <li><a href="/bus_running.html">Bus running</a></li>
+    <li><a href="/map.html">Maps</a></li>
+    <li><a href="https://public.tableau.com/app/profile/divyanshu.singh4340/viz/BusYatriRevenueAnalysis/Dashboard1?publish=yes" target="_blank">Revenue Analysis</a></li>
+    <li><a href="/prediction.html" target="_blank">Prediction</a></li>
+    <li><a href="/pass.html">Passes-Generated</a></li>
+    <li><a  href="/ticket.html">Ticket generated</a></li>
+    
+    </ul>
+    
+    </nav>
+<header>
+  <div class="header-content">
+    <h1>BUS YATRI</h1>
+    <div class="line"></div>
+    <h2>Your One stop Bus Companion</h2>
+  </div>
+</header>
+<section>
+  <div class="title">
+    <h1>Features  </h1>
+    <div class="line"></div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <img src="/images/analysis.jpg" width="400px" height="300px" >
+      <h4>Revenue Analysis</h4>
+      <p>Review the revenue generated</p>
+      <a href="https://public.tableau.com/app/profile/divyanshu.singh4340/viz/BusYatriRevenueAnalysis/Dashboard1?publish=yes" target="_blank" class="ctn">View</a>
+    </div>
+    <div class="col">
+      <img src="/images/prediction.jpg" width="400px" height="300px" >
+      <h4>Revenue Prediction</h4>
+      <p>Get the prediction of revenue for next year</p>
+      <a href="/prediction.html" target="_blank" class="ctn">View</a>
+      <a href="https://drive.google.com/file/d/1FUgutugqXbR9ITfffhxZRMfhqmG_fUPi/view?usp=drive_link" target="_blank"><button id="download">Download Report</button></a>
+    </div>
+  </div>
+</section>
+<section>
+  <div class="title">
+    <h1>Map</h1>
+    <div class="line"></div>
+  </div>
+  <section class="map" id="map">
+
+    <div class="container-fluid aos-init aos-animate" data-aos="fade-up">
+
+        <div class="section-title">
+            <h2 class="text-center mb-4">Map</h2>
+        </div>
+        <div class="venue-map">
+            <div id="map"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d230660.4518806411!2d81.6367714095387!3d25.402482058939768!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x398534c9b20bd49f%3A0xa2237856ad4041a!2sPrayagraj%2C%20Uttar%20Pradesh!5e0!3m2!1sen!2sin!4v1697043240166!5m2!1sen!2sin" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+
+    </div>
+
+  </section>
+</section>
+
+
+<section>
+  <div class="title">
+    
+    <div class="line"></div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <img src="/images/ticket.jpeg" width="400px" height="300px" >
+      <h4>Ticket Generated</h4>
+      <p>View all the tickets generated</p>
+      <a href="/ticket.html" class="ctn">View</a>
+    </div>
+    <div class="col">
+      <img src="/images/pass.jpeg" width="400px" height="300px" >
+      <h4>Passes Generated</h4>
+      <p>View all the passes generated</p>
+      <a href="/pass.html" class="ctn">View</a>
+    </div>
+  </div>
+</section>
+
+   <!--  <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
             <img src="/images/logo.jpg" height="55px" width="70px" alt="">
           
@@ -19,19 +114,19 @@
           <div class="collapse navbar-collapse" id="navbarText">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="/index.html">Home</a>
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#">Routes</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="/bus_running.html">Buses Running</a>
+                <a class="nav-link" href="#">Buses Running</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="/map.html">Maps</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="https://public.tableau.com/app/profile/divyanshu.singh4340/viz/BusYatraRevenueAnalysis1/Dashboard1?publish=yes" target="_blank">Revenue Analysis</a>
+                <a class="nav-link" href="#">Routes Analysis</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="/pass.html">Passes-Generated</a>
@@ -39,50 +134,108 @@
               <li class="nav-item">
                 <a class="nav-link" href="/ticket.html">Booked Tickets</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="https://drive.google.com/file/d/1FUgutugqXbR9ITfffhxZRMfhqmG_fUPi/view?usp=drive_link" target="_blank">Prediction</a>
-              </li>
             </ul>
             <span class="navbar-text">
               
             </span>
-          </div>
-        </div>
-        <!-- <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-            <a href="/"><button class="btn btn-primary me-md-2" type="button">Login</button></a>
-           
-          </div> -->
-      </nav>
 
-<!-- 
-      <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-        <ol class="carousel-indicators">
-          <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-        </ol>
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img class="d-block w-100" src="https://images.unsplash.com/photo-1534238754819-d8e4470ce7cc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="First slide">
-          </div>
-          <div class="carousel-item">
-            <img class="d-block w-100" src="..." alt="Second slide">
-          </div>
-          <div class="carousel-item">
-            <img class="d-block w-100" src="..." alt="Third slide">
           </div>
         </div>
-        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="sr-only">Next</span>
-        </a>
+        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+            <a href="/login.html"><button class="btn btn-primary me-md-2" type="button">Login</button></a>
+            <a href="/signup.html"><button class="btn btn-primary me-md-2" type="button">Signup</button></a>
+          </div>
+      </nav>
+      <div class="images" >
+        <img class="slider" src="images/pic1.jpg" style="width: 100%; height:550px;">
+        <img class="slider" src="images/pic2.jpg" style="width: 100%;height:550px;">
+        <img class="slider" src="images/pic3.jpg" style="width: 100%;height:550px;">
+    </div>
+    <div class="container-fluid">
+      <div class="row" style="background-color: #EDF3FF;">
+       <div class="col-xl-5 col-lg-5 col-md-5" style="padding-left: 150px; padding-top: 20px; padding-bottom: 15px;">
+         <img src="/images/bus_running.jpg" height="1100px" width="1000px" class="img-fluid">      
       </div>
-     -->
+      <div class="col-xl-7 col-lg-7 col-md-7">
+         <h5 style="padding-top: 80px;padding-left: 50px;font-size: 35px;">The road is your canvas, and the bus is your brush; paint your adventure with every mile.</h5>   
+        <a href="bus_running.html"><button id="btn-1">Check</button></a>
+          </div>
+   </div>
+   </div>-->
 </body>
+<!--<script>
+  var slideIndex = 0;
+carousel();
+
+function carousel() {
+var i;
+var x = document.getElementsByClassName("slider");
+for (i = 0; i < x.length; i++) {
+  x[i].style.display = "none";
+}
+slideIndex++;
+if (slideIndex > x.length) {slideIndex = 1}
+x[slideIndex-1].style.display = "block";
+setTimeout(carousel, 4000); // Change image every 2 seconds
+}
+
+</script>-->
+<script>
+  function initMap() {
+    var mapOptions = {
+      center: { lat: 25.402482058939768, lng: 81.6367714095387 }, // Centered around Prayagraj, Uttar Pradesh
+      zoom: 10 // Initial zoom level
+    };
+
+    var map = new google.maps.Map(document.getElementById('map'), mapOptions);
+
+    // Array of locations with bus icons
+    var locations = [
+      { lat: 25.42, lng: 81.63, title: 'Location 1' },
+      { lat: 25.45, lng: 81.65, title: 'Location 2' },
+      { lat: 25.41, lng: 81.60, title: 'Location 3' },
+      { lat: 25.39, lng: 81.68, title: 'Location 4' },
+      { lat: 25.37, lng: 81.64, title: 'Location 5' },
+      { lat: 25.47, lng: 81.65, title: 'Location 6' },
+      { lat: 25.49, lng: 81.66, title: 'Location 7' },
+      { lat: 25.50, lng: 81.67, title: 'Location 8' },
+      { lat: 25.52, lng: 81.69, title: 'Location 9' },
+      { lat: 25.36, lng: 81.70, title: 'Location 10' },
+      { lat: 25.51, lng: 81.71, title: 'Location 11' },
+      { lat: 25.40, lng: 81.72, title: 'Location 12' },
+      { lat: 25.46, lng: 81.73, title: 'Location 13' },
+      { lat: 25.64, lng: 81.74, title: 'Location 14' },
+      { lat: 25.56, lng: 81.75, title: 'Location 15' },
+      { lat: 25.43, lng: 81.61, title: 'Location 16' }
+    ];
+
+    // Add markers for each location
+    locations.forEach(function(location) {
+      var marker = new google.maps.Marker({
+        position: { lat: location.lat, lng: location.lng },
+        map: map,
+        icon: {
+          url: 'https://maps.google.com/mapfiles/kml/shapes/bus.png', // Default Google bus icon
+          scaledSize: new google.maps.Size(15, 15) // Adjust the size as needed
+        },
+        title: location.title
+      });
+    });
+  }
+</script>
+
+<!-- Load Google Maps API using the async attribute -->
+<script async defer
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB2wRzE2MN8sZtfU873Pn4vpdwtYlrWyCA&callback=initMap">
+
+(g=>{var h,a,k,p="The Google Maps JavaScript API",c="google",l="importLibrary",q="__ib__",m=document,b=window;b=b[c]||(b[c]={});var d=b.maps||(b.maps={}),r=new Set,e=new URLSearchParams,u=()=>h||(h=new Promise(async(f,n)=>{await (a=m.createElement("script"));e.set("libraries",[...r]+"");for(k in g)e.set(k.replace(/[A-Z]/g,t=>"_"+t[0].toLowerCase()),g[k]);e.set("callback",c+".maps."+q);a.src=`https://maps.${c}apis.com/maps/api/js?`+e;d[q]=f;a.onerror=()=>h=n(Error(p+" could not load."));a.nonce=m.querySelector("script[nonce]")?.nonce||"";m.head.append(a)}));d[l]?console.warn(p+" only loads once. Ignoring:",g):d[l]=(f,...n)=>r.add(f)&&u().then(()=>d[l](f,...n))})({
+  key: "AIzaSyB2wRzE2MN8sZtfU873Pn4vpdwtYlrWyCA",
+  v: "weekly",
+  // Use the 'v' parameter to indicate the version to use (weekly, beta, alpha, etc.).
+  // Add other bootstrap parameters as needed, using camel case.
+});
+</script>
+
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
 </html>

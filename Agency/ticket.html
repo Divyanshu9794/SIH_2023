@@ -6,6 +6,7 @@
     <title>Ticket List</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="/css/style1.css">
+    <link rel="stylesheet" href="/css/index.css">
     <style>
         body{
             background-image: url("/images/bus.jpg");
@@ -46,79 +47,102 @@
 .table tbody {
     background-color: rgba(255, 255, 255, 0.7); /* Adjust alpha value for transparency */
 }
+#content{
+    margin-top: 120px;
+}
 
 
     </style>
 </head>
 <body>
-    <div class="container">
-    <h3 class="heading">Ticket Generated</h3>
-    <div class="table-container">
- <table class="table">
-           <!-- <caption>Ticket Generated</caption> -->
-            <thead>
-                <tr>
-                    <th scope="col">Ticket ID</th>
-                    <th scope="col">Source</th>
-                    <th scope="col">Destination</th>
-                    <th scope="col">Booking Date/Time</th>
-                    <th scope="col">Fare</th>
-                </tr>
-            </thead>
-            <tbody>
-                <!-- Ticket details will be dynamically added here -->
-                <tr>
-                <td>1</td>
-                <td>naini</td>
-                <td>prayag</td>
-                <td>12/10/23, 12:00</td>
-                <td>Rs. 40</td>
-                </tr>
+    <nav class="navbar">
 
-                <tr>
-                    <td>2</td>
-                    <td>naini</td>
-                    <td>prayag</td>
-                    <td>12/10/23, 12:00</td>
-                    <td>Rs. 40</td>
-                    </tr>
-
-                    <tr>
-                        <td>3</td>
+        <img src="/images/logo.jpg" class="logo"></img>
+        <ul class="nav-links">
+        
+            <li class="active  "><a href="/index.html">Home</a></li>
+        
+        <li><a href="/route.html">Routes</a></li>
+        <li><a href="/bus_running.html">Bus running</a></li>
+        <li><a href="/map.html">Maps</a></li>
+        <li><a href="https://public.tableau.com/app/profile/divyanshu.singh4340/viz/BusYatriRevenueAnalysis/Dashboard1?publish=yes" target="_blank">Revenue Analysis</a></li>
+        <li><a href="/prediction.html">Prediction</a></li>
+        <li><a href="/pass.html">Passes-Generated</a></li>
+        
+        
+        </ul>
+        
+        </nav>
+    <section id="content">
+        <div class="container">
+            <h3 class="heading">Ticket Generated</h3>
+            <div class="table-container">
+         <table class="table">
+                   <!-- <caption>Ticket Generated</caption> -->
+                    <thead>
+                        <tr>
+                            <th scope="col">Ticket ID</th>
+                            <th scope="col">Source</th>
+                            <th scope="col">Destination</th>
+                            <th scope="col">Booking Date/Time</th>
+                            <th scope="col">Fare</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Ticket details will be dynamically added here -->
+                        <tr>
+                        <td>1</td>
                         <td>naini</td>
                         <td>prayag</td>
                         <td>12/10/23, 12:00</td>
                         <td>Rs. 40</td>
                         </tr>
-
+        
                         <tr>
-                            <td>4</td>
+                            <td>2</td>
                             <td>naini</td>
                             <td>prayag</td>
                             <td>12/10/23, 12:00</td>
                             <td>Rs. 40</td>
                             </tr>
-
+        
                             <tr>
-                                <td>5</td>
+                                <td>3</td>
                                 <td>naini</td>
                                 <td>prayag</td>
                                 <td>12/10/23, 12:00</td>
                                 <td>Rs. 40</td>
                                 </tr>
-
+        
                                 <tr>
-                                    <td>6</td>
+                                    <td>4</td>
                                     <td>naini</td>
                                     <td>prayag</td>
                                     <td>12/10/23, 12:00</td>
                                     <td>Rs. 40</td>
                                     </tr>
-            </tbody>
-        </table>
-    </div>
-    </div>
-    </div>
+        
+                                    <tr>
+                                        <td>5</td>
+                                        <td>naini</td>
+                                        <td>prayag</td>
+                                        <td>12/10/23, 12:00</td>
+                                        <td>Rs. 40</td>
+                                        </tr>
+        
+                                        <tr>
+                                            <td>6</td>
+                                            <td>naini</td>
+                                            <td>prayag</td>
+                                            <td>12/10/23, 12:00</td>
+                                            <td>Rs. 40</td>
+                                            </tr>
+                    </tbody>
+                </table>
+            </div>
+            </div>
+            </div>
+    </section>
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>

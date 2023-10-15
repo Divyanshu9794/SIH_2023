@@ -55,6 +55,14 @@ app.get('/bus_running.html', (req, res) => {
     res.sendFile(__dirname + '/bus_running.html')
 
 })
+app.get('/prediction.html', (req, res) => {
+    res.sendFile(__dirname + '/prediction.html')
+
+})
+app.get('/route.html', (req, res) => {
+    res.sendFile(__dirname + '/route.html')
+
+})
 
 
 app.use(bodyParser.urlencoded({

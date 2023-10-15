@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdn.datatables.net/1.10.14/css/jquery.dataTables.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+<link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;1,800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/index.css">
+<!-- <link rel="stylesheet" href="Asset/css/route.css"> -->
+<title>Bus Route</title>
+
+<style>
+      body {
+      font-family: 'Raleway', sans-serif;
+      background-color: #f2f2f2;
+    }
+    .search-input {
+  width: 150px;
+  padding: 15px;
+  border-radius: 30px;
+  /* padding-left: 25px; */
+  /* padding-right: 25px; */
+  font-size: 18px;
+}
+
+.card_body {
+    margin-top: 20px;
+    width: 100%; /* Set width to 100% to cover the container */
+  }
+
+  .table {
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  .t {
+    margin: 0 10px;
+  }
+
+    .heading {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+      max-width: 800px;
+      margin: 20px auto;
+      background-color: #fff;
+      padding: 15px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+    }
+
+    .searchable-dropdown {
+      margin-bottom: 10px;
+    }
+
+    .t {
+      text-align: center;
+      font-size: 20px;
+      margin: 10px 0;
+    }
+
+    #search {
+      display: block;
+      width: 150px;
+      /* padding: 10px; */
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 25px;
+      cursor: pointer;
+    }
+
+    .card_body {
+      margin-top: 20px;
+    }
+
+    .table {
+      width: 100%;
+      margin-top: 20px;
+    }
+
+    /* .searchable-dropdown {
+    position: relative;
+    display: inline-block;
+  } */
+
+  /* .search-input {
+    padding-left: 30px;
+  } */
+
+    /* coding */
+    
+    .main-datatable {
+  padding: 0px; 
+  border: 1px solid #f3f2f2;
+  border-bottom: 0;
+  box-shadow: 0px 2px 10px rgba(0,0,0,.05);
+}
+.d-flex{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.card_body{ 
+  background-color: white;
+  border: 1px solid transparent;
+  border-radius: 2px;
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+}
+.main-datatable .row {
+  margin: 0;
+} 
+
+
+.dim_button {
+  display: inline-block;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+  padding-top: 6px;
+  background: rgb(57, 85, 136);
+  margin-right: 10px;
+  position: relative;
+  cursor: pointer;
+  font-weight: 600;
+  margin-bottom: 20px;
+} 
+.createSegment a { 
+  margin-bottom: 0px;
+  border-radius: 50px;
+  background: #ffffff;
+  border: 1px solid #007bff;
+  color: #007bff;
+  transition: all .4s ease;
+}
+
+.add_flex{
+  display: flex;
+  justify-content: flex-end;
+  padding-right:0px;
+}
+.main-datatable .dataTable.no-footer {
+  border-bottom: 1px solid #eee;
+}
+.main-datatable .cust-datatable thead {
+  background-color: #DEDEDE;
+}
+.main-datatable .cust-datatable>thead>tr>th {
+  border-bottom-width: 0;
+  color: #0a0a0a;
+  font-weight: 600;
+  padding: 16px 15px;
+  vertical-align: middle;
+  padding-left: 18px;
+  text-align: center;
+  font-size: 20px;
+}
+.main-datatable .cust-datatable>tbody td {
+  padding: 10px 15px 10px 18px;
+  color: #333232;
+  font-size: 20px;
+  font-weight: 500;
+  word-break: break-word;
+  border-color: #eee;
+  text-align: center;
+  vertical-align: middle;
+}
+.main-datatable .cust-datatable>tbody tr {
+  border-top: none;
+}
+.main-datatable .table > tbody > tr:nth-child(even) {
+  background: #DEDEDE;
+}
+.btn-group.open .dropdown-toggle {
+  box-shadow: none;
+}
+.main-datatable .dropdown_icon {
+  display: inline-block;
+  color: #8a8a8adb;
+  font-size: 12px;
+  border: 1px solid #d4d4d4;
+  padding: 10px 11px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.btn-group i{
+  color: #8e8e8e; 
+  margin: 2px;
+}
+.main-datatable .actionCust a {
+  display: inline-block;
+  color: #8a8a8a;
+  font-size: 12px;
+  border: 1px solid #d4d4d4;
+  padding: 10px 11px;
+  margin: -9px 3px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.main-datatable .actionCust a i{
+  color: #8e8e8e;
+  margin: 2px;
+}
+.main-datatable .dropdown-menu {
+  padding: 0;
+  border-radius: 4px;
+  box-shadow: 10px 10px 20px #c8c8c8;
+  margin-top: 10px;
+  left: -65px;
+  top: 32px;
+}
+.main-datatable .dropdown-menu > li > a {
+  display: block;
+  padding: 12px 20px;
+  clear: both;
+  font-weight: normal;
+  line-height: 1.42857;
+  color: #333333;
+  white-space: nowrap;
+  border-bottom: 1px solid #d4d4d4;
+}
+
+.main-datatable .dropdown-menu:before {
+  position: absolute;
+  top: -7px;
+  left: 78px;
+  display: inline-block;
+  border-right: 7px solid transparent;
+  border-bottom: 7px solid #d4d4d4;
+  border-left: 7px solid transparent;
+  border-bottom-color: #d4d4d4;
+  content: '';
+}
+.main-datatable .dropdown-menu:after {
+  position: absolute;
+  top: -6px;
+  left: 78px;
+  display: inline-block;
+  border-right: 6px solid transparent;
+  border-bottom: 6px solid #ffffff;
+  border-left: 6px solid transparent;
+  content: '';
+}
+.dropdown-menu i {
+  margin-right: 8px;
+}
+.main-datatable .dataTables_wrapper .dataTables_paginate .paginate_button {
+  color: #999999 !important;
+  background-color: #f6f6f6 !important;
+  border-color: #d4d4d4 !important;
+  border-radius: 40px;
+  margin: 5px 3px;
+}
+
+
+.main-datatable .dataTables_paginate {
+  padding-top: 0 !important;
+  margin: 15px 10px;
+  float: right !important;
+}
+.mode{
+  padding:4px 10px;
+  line-height: 13px;
+  color:#fff;
+  font-weight: 400;
+  border-radius: 1rem;
+  -webkit-border-radius: 1rem;
+  -moz-border-radius: 1rem;
+  -ms-border-radius: 1rem;
+  -o-border-radius: 1rem;
+  font-size:11px;
+  letter-spacing: 0.4px;
+}
+
+
+@media only screen and (max-width:1200px){
+  .overflow-x{
+      overflow-x:scroll;
+  }
+  .overflow-x::-webkit-scrollbar{
+      width:5px;
+      height:6px;
+  }
+  .overflow-x::-webkit-scrollbar-thumb{
+      background-color: #888;
+  }
+  .overflow-x::-webkit-scrollbar-track{
+       background-color: #f1f1f1;
+  }
+}
+
+
+
+    /* coding */
+</style>
+
+</head>
+<body>
+    <nav class="navbar">
+
+        <img src="/images/logo.jpg" class="logo"></img>
+        <ul class="nav-links">
+        
+            <li class="active  "><a href="/index.html">Home</a></li>
+        
+        
+        <li><a href="/bus_running.html">Bus running</a></li>
+        <li><a href="/map.html">Maps</a></li>
+        <li><a href="https://public.tableau.com/app/profile/divyanshu.singh4340/viz/BusYatriRevenueAnalysis/Dashboard1?publish=yes" target="_blank">Revenue Analysis</a></li>
+        <li><a href="/prediction.html">Prediction</a></li>
+        <li><a href="/pass.html">Passes-Generated</a></li>
+        <li><a  href="/ticket.html">Ticket generated</a></li>
+        
+        </ul>
+        
+        </nav>
+        <section id="content">
+            <h1 class="heading">BUS ROUTE</h1>
+            <div class="container">
+              <div class="searchable-dropdown">
+                  <select class="search-input" id="source">
+                      <option value="">Source</option>
+                      <option value="option1">Trivenipuram</option>
+                      <option value="option2">Shantipuram</option>
+                      <option value="option3">Bairana</option>
+                      <option value="option4">Civil Lines</option>
+                  </select>
+              </div>
+              <div class="t">
+                To
+              </div>
+              <div class="searchable-dropdown">
+                  <select class="search-input" id="destination"> 
+                      <option value="">Destination</option>
+                      <option value="option1">Airport</option>
+                      <option value="option2">Reymand</option>
+                      <option value="option3">Shankargarh</option>
+                      <option value="option4">Pratappur</option>
+                  </select>
+              </div>
+              <button style="height: 52px;" onclick="searchRoutes()" id="search">Search</button>
+          </div>
+          <div class="container">
+              <div class="row">
+                <div class="col-md-12 main-datatable">
+                  <div class="card_body" id="resultTable">
+                      <div class="row d-flex">
+                      <div class="overflow-x">
+                         <!-- table content -->
+                      </div>
+                  </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </section>
+  
+  
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.14/js/jquery.dataTables.min.js"></script>
+<script src="Asset/js/route.js"></script>
+
+<script>
+     function searchRoutes() {
+      var source = $("#source").val();
+      var destination = $("#destination").val();
+
+      var resultTable = $("#resultTable");
+      resultTable.empty(); // Clear previous results
+
+      // Example: Creating a table row based on source and destination
+      if (source === "option1" && destination === "option1") {
+        resultTable.append('<table style="width:100%;" id="filtertable" class="table cust-datatable dataTable no-footer">' +
+            '<tbody><tr class="text-center"><th>Trivenipuram To Airport</th></tr>' +
+          '<thead><tr><th>Bus ID</th><th>Departure Time</th><th>ETA</th></tr></thead>' +
+          '<tr><td>TRV001</td><td>6:00AM</td><td>6:45AM</td></tr>' +
+          '<tr><td>TRV002</td><td>7:15AM</td><td>8:00AM</td></tr>' +
+          '<tr><td>TRV003</td><td>8:30AM</td><td>9:15AM</td></tr>' +
+          '<tr><td>TRV004</td><td>9:45AM</td><td>10:30AM</td></tr></tbody></table>');
+      } else if (source === "option2" && destination === "option2") {
+        // Add logic for option2
+        resultTable.append('<table class="table cust-datatable dataTable no-footer">' +
+            '<tbody><tr class="text-center"><th>Shantipuram To Raymond</th></tr>' +
+          '<thead><tr><th>Bus ID</th><th>Departure Time</th><th>ETA</th></tr></thead>' +
+          '<tr><td>SHN001</td><td>6:00AM</td><td>6:45AM</td></tr>' +
+          '<tr><td>SHN002</td><td>7:15AM</td><td>8:00AM</td></tr>' +
+          '<tr><td>SHN003</td><td>8:30AM</td><td>9:15AM</td></tr>' +
+          '<tr><td>SHN004</td><td>9:45AM</td><td>10:30AM</td></tr></tbody></table>');
+      } else if (source === "option3" && destination === "option3") {
+        // Add logic for option3
+        resultTable.append('<table class="table cust-datatable dataTable no-footer">' +
+            '<tbody><tr class="text-center"><th>Bairahna To Shankargarh</th></tr>' +
+          '<thead><tr><th>Bus ID</th><th>Departure Time</th><th>ETA</th></tr></thead>' +
+          '<tr><td>CL001</td><td>6:00AM</td><td>6:45AM</td></tr>' +
+          '<tr><td>CL002</td><td>7:15AM</td><td>8:00AM</td></tr>' +
+          '<tr><td>CL003</td><td>8:30AM</td><td>9:15AM</td></tr>' );
+      } else if (source === "option4" && destination === "option4") {
+        // Add logic for option4
+        resultTable.append('<table class="table cust-datatable dataTable no-footer">' +
+            '<tbody><tr class="text-center"><th>Civil Lines To PratapPur</th></tr>' +
+          '<thead><tr><th>Bus ID</th><th>Departure Time</th><th>ETA</th></tr></thead>' +
+          '<tr><td>BRN001</td><td>6:00AM</td><td>6:45AM</td></tr>' +
+          '<tr><td>BRN002</td><td>7:15AM</td><td>8:00AM</td></tr>' );
+         }
+    }
+</script>
+</body>
+</html>
+

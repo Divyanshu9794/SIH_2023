@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Google Maps Example with Bus Icons</title>
+  <link rel="stylesheet" href="/css/index.css">
   <style>
     #map {
       height: 450px;
@@ -51,6 +52,24 @@
 
 </head>
 <body>
+  <nav class="navbar">
+
+    <img src="/images/logo.jpg" class="logo"></img>
+    <ul class="nav-links">
+    
+      <li class="active  "><a href="/index.html">Home</a></li>
+    
+    <li><a href="/route.html">Routes</a></li>
+    <li><a href="/bus_running.html">Bus running</a></li>
+    
+    <li><a href="https://public.tableau.com/app/profile/divyanshu.singh4340/viz/BusYatriRevenueAnalysis/Dashboard1?publish=yes" target="_blank">Revenue Analysis</a></li>
+    <li><a href="/prediction.html">Prediction</a></li>
+    <li><a href="/pass.html">Passes-Generated</a></li>
+    <li><a  href="/ticket.html">Ticket generated</a></li>
+    
+    </ul>
+    
+    </nav>
 
   <section class="map" id="map">
 
@@ -125,28 +144,7 @@
   </script>
 
   
-<h3 class="text-center m-5">Booked Ticket/ Pass Generated</h3>
-<section class="ticket" id="ticket">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-4 overlay">
-        <div class="content mt-3">
-          <p>
-            "Travel by bus is ideal for those on a budget who don’t mind roughing it and are looking for an adventure. Book a seat on a bus and let the journey unfold as you pass through towns and cities, rivers and oceans, past farms and forests."
-          </p>
-          <div class="col">
-          <button type="button" onclick="redirectToAnotherPage()" class="btn btn-primary mb-3">
-            Show generated tickets
-          </button>
-          <button type="button" onclick="redirectToPassPage()" class="btn btn-primary mb-3 ml-2">
-            Show generated Pass
-          </button>
-        </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+
 
  
 

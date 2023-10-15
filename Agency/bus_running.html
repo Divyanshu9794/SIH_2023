@@ -9,9 +9,28 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
 <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;1,800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/css/bus_running.css">
+<link rel="stylesheet" href="/css/index.css">
 <title>Bus Status</title>
 </head>
 <body>
+    <nav class="navbar">
+
+        <img src="/images/logo.jpg" class="logo"></img>
+        <ul class="nav-links">
+        
+            <li class="active  "><a href="/index.html">Home</a></li>
+        
+        <li><a href="/route.html">Routes</a></li>
+        
+        <li><a href="/map.html">Maps</a></li>
+        <li><a href="https://public.tableau.com/app/profile/divyanshu.singh4340/viz/BusYatriRevenueAnalysis/Dashboard1?publish=yes" target="_blank">Revenue Analysis</a></li>
+        <li><a href="/prediction.html">Prediction</a></li>
+        <li><a href="/pass.html">Passes-Generated</a></li>
+        <li><a  href="/ticket.html">Ticket generated</a></li>
+        
+        </ul>
+        
+        </nav>
     <div class="container p-30">
         <div class="row">
             <div class="col-md-12 main-datatable">
@@ -45,10 +64,10 @@
                                     <td>BS-VI</td>
                                     <td>80</td>
                                     <td>Diesel</td>
-                                    <td><span class="mode mode_on">Active</span></td>
+                                    <td><span id="source" style="background-color: #09922d;">Active</span></td>
                                     <td>
                                         <div class="btn-group">
-                                            <a><img src="/images/delete.png"></a>
+                                            <button onclick="change();"><img src=" /images/delete.png"></button>
                                         </div>
                                     </td>
                                 </tr>
@@ -60,7 +79,7 @@
                                     <td><span class="mode mode_off">Inactive</span></td>
                                     <td>
                                         <div class="btn-group">
-                                            <a><img src="/images/delete.png"></a>
+                                            <a><img src=" /images/delete.png"></a>
                                         </div>
                                     </td>
                                 </tr> 
@@ -69,10 +88,10 @@
                                     <td>BS-VI</td>
                                     <td>90</td>
                                     <td>Petrol</td>
-                                    <td><span class="mode mode_on">Active</span></td>
+                                    <td><span id="source" style="background-color: #09922d;">Active</span></td>
                                     <td>
                                         <div class="btn-group">
-                                            <a><img src="/images/delete.png"></a>
+                                            <button onclick="change();"><img src=" /images/delete.png"></button>
                                         </div>
                                     </td>
                                 </tr>
@@ -81,10 +100,10 @@
                                     <td>---</td>
                                     <td>80</td>
                                     <td>CNG</td>
-                                    <td><span class="mode mode_on">Active</span></td>
+                                    <td><span id="source" style="background-color: #09922d;">Active</span></td>
                                     <td>
                                         <div class="btn-group">
-                                            <a><img src="/images/delete.png"></a>
+                                            <button onclick="change();"><img src=" /images/delete.png"></button>
                                         </div>
                                     </td>
                                 </tr>
@@ -96,7 +115,7 @@
                                     <td><span class="mode mode_off">Inactive</span></td>
                                     <td>
                                         <div class="btn-group">
-                                            <a><img src="/images/delete.png"></a>
+                                            <a><img src=" /images/delete.png"></a>
                                         </div>
                                     </td>
                                 </tr>
@@ -105,10 +124,10 @@
                                     <td>BS-VI</td>
                                     <td>80</td>
                                     <td>Diesel</td>
-                                    <td><span class="mode mode_on">Active</span></td>
+                                    <td><span id="source" style="background-color: #09922d;">Active</span></td>
                                     <td>
                                         <div class="btn-group">
-                                            <a><img src="/images/delete.png"></a>
+                                            <button onclick="change();"><img src=" /images/delete.png"></button>
                                         </div>
                                     </td>
                                 </tr>
@@ -117,10 +136,10 @@
                                     <td>---</td>
                                     <td>90</td>
                                     <td>CNG</td>
-                                    <td><span class="mode mode_on">Active</span></td>
+                                    <td><span id="source" style="background-color: #09922d;">Active</span></td>
                                     <td>
                                         <div class="btn-group">
-                                            <a><img src="/images/delete.png"></a>
+                                            <button onclick="change();"><img src=" /images/delete.png"></button>
                                         </div>
                                     </td>
                                 </tr>
@@ -129,10 +148,10 @@
                                     <td>BS-VI</td>
                                     <td>80</td>
                                     <td>Diesel</td>
-                                    <td><span class="mode mode_on">Active</span></td>
+                                    <td><span id="source" style="background-color: #09922d;">Active</span></td>
                                     <td>
                                         <div class="btn-group">
-                                            <a><img src="/images/delete.png"></a>
+                                            <button onclick="change();"><img src=" /images/delete.png"></button>
                                         </div>
                                     </td>
                                 </tr>
@@ -141,10 +160,10 @@
                                     <td>---</td>
                                     <td>90</td>
                                     <td>CNG</td>
-                                    <td><span class="mode mode_on">Active</span></td>
+                                    <td><span id="source" style="background-color: #09922d;">Active</span></td>
                                     <td>
                                         <div class="btn-group">
-                                            <a><img src="/images/delete.png"></a>
+                                            <button onclick="change();"><img src=" /images/delete.png"></button>
                                         </div>
                                     </td>
                                 </tr> 
@@ -153,10 +172,10 @@
                                     <td>BS-VI</td>
                                     <td>90</td>
                                     <td>Diesel</td>
-                                    <td><span class="mode mode_on">Active</span></td>
+                                    <td><span id="source" style="background-color: #09922d;">Active</span></td>
                                     <td>
                                         <div class="btn-group">
-                                            <a><img src="/images/delete.png"></a>
+                                            <button onclick="change();"><img src=" /images/delete.png"></button>
                                         </div>
                                     </td>
                                 </tr> 
@@ -165,10 +184,10 @@
                                     <td>BS-VI</td>
                                     <td>90</td>
                                     <td>Diesel</td>
-                                    <td><span class="mode mode_off">Inactive</span></td>
+                                    <td><span id="source" style="background-color: #09922d;">Active</span></td>
                                     <td>
                                         <div class="btn-group">
-                                            <a><img src="/images/delete.png"></a>
+                                            <button onclick="change();"><img src=" /images/delete.png"></button>
                                         </div>
                                     </td>
                                 </tr> 
@@ -177,13 +196,12 @@
                                     <td>---</td>
                                     <td>90</td>
                                     <td>CNG</td>
-                                    <td><span class="mode mode_on">Active</span></td>
+                                    <td><span id="source" style="background-color: #09922d;">Active</span></td>
                                     <td>
                                         <div class="btn-group">
-                                            <a><img src="/images/delete.png"></a>
+                                            <button onclick="change();"><img src=" /images/delete.png"></button>
                                         </div>
-                                    </td>
-                                </tr>      
+                                    </td>                                </tr>      
                             </tbody>
                         </table>
                     </div>
