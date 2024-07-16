@@ -1,20 +1,35 @@
-# SIH_2023
 
+# Bus Revenue Prediction
 
-To run the page first download zip 
-then Unzip the File 
+## Overview
+The Bus Revenue Prediction project is an innovative system developed to predict bus schedules and forecast revenue. The application utilizes a full-stack approach with a robust backend and a user-friendly frontend.
 
+## Features
+- **User Applications**: Architected using Node.js and Express.js.
+- **Web Portal**: Developed with Bootstrap for responsive design.
+- **Data Analysis**: Integrated with Tableau for comprehensive data insights.
+- **Predictive Algorithms**: Implemented to forecast schedules and revenue in real-time.
 
-Then open the file in The vs Code and move to directory By changing diectory in terminal
-to cd agency 
+## Technologies Used
+- Node.js
+- Express.js
+- MongoDB
+- Bootstrap
+- Tableau
+- Streamlit
 
+## Installation
+1. Clone the repository:
+    ```bash
+    git clone https://github.com/Divyanshu9794/Bus-Revenue-Prediction.git
+    cd Bus-Revenue-Prediction
+    ```
+2. Install dependencies:
+    ```bash
+    npm install
+    ```
+3. Run the application:
+    ```bash
+    npm start
+    ```
 
-after moving to that directory then In terminal write 
---->  npm install express body-parser nodemailer alert 
-
---> after successful installation write in terminal 
-
-node mongo1.js
-
-
-then  open Browser and write localhost:2204
